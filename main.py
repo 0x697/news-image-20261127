@@ -24,6 +24,8 @@ def png_size(data: bytes) -> tuple[int, int]:
         raise SystemExit("entry.png is not a PNG file")
     if len(data) < 24 or data[12:16] != b"IHDR":
         raise SystemExit("entry.png has no IHDR chunk")
+    if not data.rstrip(b"\x00").endswith(b"IEND\xaeB`\x82"):
+        raise SystemExit("entry.png is truncated: no IEND chunk")
     width, height = struct.unpack(">II", data[16:24])
     return width, height
 
