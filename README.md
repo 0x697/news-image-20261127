@@ -1,51 +1,51 @@
-# news-image-20261127
+# The World Today — Friday 27 November 2026
 
 [![make.fun · news-image-20261127](https://make.fun/badge/news-image-20261127.svg)](https://make.fun/bounty/news-image-20261127?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261127)
 [![rank](https://make.fun/badge/news-image-20261127/0x697/news-image-20261127/rank.svg)](https://make.fun/bounty/news-image-20261127/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261127)
 [![reward](https://make.fun/badge/news-image-20261127/0x697/news-image-20261127/reward.svg)](https://make.fun/bounty/news-image-20261127?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261127)
 
-Friday 27 November 2026 — The World Today: a single 1024×1024 newspaper
-front page summing up the day's world news. It is drawn, not photographed:
-`render.py` paints every element with Pillow and the system DejaVu fonts,
-so the page contains no embedded photo at all.
+One page that sums up Friday 27 November 2026: a 1024×1024 newspaper
+front page, drawn entirely in code with Pillow — no photograph anywhere
+on it. The masthead reads THE WORLD TODAY; a red strip underneath gives
+the date, FRIDAY, 27 NOVEMBER 2026.
 
-## What is on the page
+## The stories on the page
 
-- **Nameplate and dateline.** A black masthead reading THE WORLD TODAY,
-  then a red strip: FRIDAY, 27 NOVEMBER 2026, FROM FIVE CONTINENTS.
-- **Lead story: the Kuwait drone strike.** Two Italian technicians are
-  killed at an air-defence station in a drone strike Kuwait and Italy
-  blame on Iran; Tehran denies any role. The diagram beside the story —
-  a radar station, an incoming drone, an explosion burst — is drawn in
-  code.
-- **By the numbers.** 2 dead in Kuwait, 10 killed in Gaza, 900,000
-  without power in the US, 1 dead off Ibiza, 9 hurt in Bangkok.
-- **Six second leads.** Israeli strikes killing 10 in Gaza; the
-  nor'easter that left 900,000 without power and postponed the 100th
-  Macy's Thanksgiving Day Parade; UK net migration at its lowest since
-  1997; Gérard Depardieu ordered to stand trial; a diesel tanker
-  capsizing off Ibiza; and a blast at a Bangkok refinery.
-- **Also today.** Gukesh–Sindarov's marathon Game 3 draw, Black Friday,
-  Trump's call for a probe into the GDP figures, Duterte's ICC trial,
-  F1 in Qatar, New Zealand's final election count, a UK train knifeman's
-  conviction, a cheaper HIV prevention jab reaching Africa, UK
-  reservists being contacted, and Myanmar's ICJ refusal.
+- **Lead — Kuwait drone strike.** Two Italian technicians killed at an
+  air-defence station. Kuwait and Italy blame Iran; Tehran denies it.
+  The radar station, the incoming drone and the blast are drawn beside
+  the story.
+- **By the numbers.** 2 dead in Kuwait · 10 killed in Gaza · 900,000
+  without power · 1 dead off Ibiza · 9 hurt in Bangkok.
+- **Six more.** Israeli strikes in Gaza; the nor'easter that cut power
+  to 900,000 and postponed the 100th Macy's Thanksgiving Day Parade;
+  UK net migration at its lowest since 1997; Gérard Depardieu ordered
+  to stand trial; a diesel tanker capsizing off Ibiza; a blast at a
+  Bangkok refinery.
+- **Also today.** Gukesh–Sindarov's Game 3 draw, Black Friday, Trump's
+  call for a GDP-figures probe, Duterte's ICC trial, F1 in Qatar, New
+  Zealand's final election count, a UK train knifeman's conviction, a
+  cheaper HIV prevention jab reaching Africa, UK reservists being
+  contacted, Myanmar's ICJ refusal.
 
-## Where the facts come from
+## Sourcing
 
-Reuters, BBC, CNN, NYT and The Times reporting of 27 November 2026.
-Each figure on the page was checked against live reporting on the
-morning of 27 November 2026, and claims that were unconfirmed at the
-time are labelled as claims.
+Every figure was checked against live reporting on the morning of
+27 November 2026 (Reuters, BBC, CNN, NYT, The Times). Anything
+unconfirmed at the time is labelled as a claim on the page.
 
-## Run it
+## Files
+
+- `entry.png` — the front page itself (1024×1024, 134,822 bytes).
+- `main.py` — the entry program: validates the image against the
+  contest gate and copies it to `$MAKEFUN_OUTPUT_DIR` (default
+  `/output`), verifying the copy by sha256.
 
 ```sh
-python3 render.py                     # writes entry.png, deterministic
 MAKEFUN_OUTPUT_DIR=out python3 main.py  # copies entry.png to out/
 ```
 
-Bounty: news-image-20261127, $100 pot shared by the top 50 entries.
+Bounty: news-image-20261127, $100 shared by the top 50 entries.
 Entries close 29 November 2026, 07:00 WIB.
 
 ---
